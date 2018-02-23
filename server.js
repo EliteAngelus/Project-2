@@ -22,7 +22,7 @@ var pusher = new Pusher(
     secret: "26efb694b16fb3444fc1",
     cluster: "us2"
   });
-  pusher.trigger("public-language-app", "event",{
+  pusher.trigger("public-language-chat", "event",{
     "message": "Hello World!"
   });
 
@@ -35,12 +35,13 @@ app.set("view engine", "handlebars");
 // Set up var app to use post and get to retrieve chat messages
 app.post('/message', function (req, res) {
   var message = req.body.message;
-  pusher.trigger('public-chat', 'message-added', { message });
+  pusher.trigger('public-language-chat', 'message-added', { message });
   res.sendStatus(200);
 });
 
-// app.get('/', function (req, res) {
-//   res.sendFile('/public/index.html', { root: __dirname });
+app.get('/', function (req, res) {
+  res.render('index', { root: __dirname });
+});
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/controller.js");
@@ -49,4 +50,4 @@ app.use(routes);
 
 app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
-});
+})

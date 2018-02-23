@@ -19,6 +19,7 @@ $(document).ready(function () {
         $.post("http://localhost:3000/message", { message });
     });
     function onMessageAdded(data) {
+        console.log("test")
         let template = $("#new-message").html();
         template = template.replace("{{body}}", data.message);
         $(".chat").append(template);
