@@ -27,81 +27,22 @@
         </div>
       <button id="get-started" type="submit">Lets Get Learning!</button>
   </form>
-  <div id="chat-page">
-    <div class="row form-group">
-      <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-8 col-lg-offset-2">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <span class="glyphicon glyphicon-comment"></span> Learn a Language
-            <div class="btn-group pull-right">
-              <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-chevron-down"></span>
-              </button>
-              <ul class="dropdown-menu slidedown">
-                <li>
-                  <a href="http://www.jquery2dotnet.com">
-                    <span class="glyphicon glyphicon-refresh">
-                    </span>Refresh</a>
-                </li>
-                <li>
-                  <a href="http://www.jquery2dotnet.com">
-                    <span class="glyphicon glyphicon-ok-sign">
-                    </span>Available</a>
-                </li>
-                <li>
-                  <a href="http://www.jquery2dotnet.com">
-                    <span class="glyphicon glyphicon-remove">
-                    </span>Busy</a>
-                </li>
-                <li>
-                  <a href="http://www.jquery2dotnet.com">
-                    <span class="glyphicon glyphicon-time"></span>
-                    Away</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                  <a href="http://www.jquery2dotnet.com">
-                    <span class="glyphicon glyphicon-off"></span>
-                    Sign Out</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="panel-body body-panel">
-            <ul class="chat">
-            </ul>
-          </div>
-          <div class="panel-footer clearfix">
-            <textarea id="message" class="form-control" rows="3"></textarea>
-            <span class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" style="margin-top: 10px">
-              <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
-            </span>
-          </div>
-        </div>
-      </div>
+<div class="container">
+  <div class="col-md-6 chat_box">
+    <div class="form-control messages_display"></div>
+    <br />
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="input_name form-control" placeholder="Name" />
     </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="input_message form-control" placeholder="Message"></textarea>
     </div>
-    <script  type="text/template" id="new-message-other">
-        <li class="left clearfix">
-            <span class="chat-img pull-left">
-                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
-            </span>
-            <div class="chat-body clearfix">
-                <p>
-                    {{body}}
-                </p>
-            </div>
-        </li>
-    </script>
-    <script  type="text/template" id="new-message">
-        <li id="{{id}}" class="right clearfix">
-            <div class="chat-body clearfix">
-                <p>
-                    {{body}}
-                </p>
-            </div>
-        </li>
-    </script>
+    <div class="form-group input_send_holder">
+      <input type="submit" value="Send" class="btn btn-primary input_send" />
+    </div>
   </div>
+</div>
 </div>
     
