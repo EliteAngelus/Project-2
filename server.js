@@ -22,22 +22,22 @@ var pusher = new Pusher(
     secret: "26efb694b16fb3444fc1",
     cluster: "us2"
   });
-
-// Set up var app to use post and get to retrieve chat messages
-// app.post('/message', function (req, res) {
-//   var message = req.body.message;
-//   pusher.trigger('public-chat', 'message-added', { message });
-//   res.sendStatus(200);
-// });
-// app.get('/', function (req, res) {
-//   res.sendFile('/public/index.html', { root: __dirname });
-// });
+  pusher.trigger("language-app", "event",{
+    "message": "Hello World!"
+  });
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// Set up var app to use post and get to retrieve chat messages
+app.post('/message', function (req, res) {
+  var message = req.body.message;
+  pusher.trigger('public-chat', 'message-added', { message });
+  res.sendStatus(200);
+});
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/controller.js");
