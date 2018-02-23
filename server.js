@@ -39,6 +39,9 @@ app.post('/message', function (req, res) {
   res.sendStatus(200);
 });
 
+// app.get('/', function (req, res) {
+//   res.sendFile('/public/index.html', { root: __dirname });
+
 // Import routes and give the server access to them.
 var routes = require("./controllers/controller.js");
 
