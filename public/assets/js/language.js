@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $('#chat-page').hide();
+    $("#get-started").click(function () {
+        event.preventDefault();
+        $("#login-form").hide();
+        $("#chat-page").show();
+    });
     var pusher = new Pusher('507bfdfaab454a693999', {
         cluster: 'us2',
         encrypted: false
@@ -8,8 +14,9 @@ $(document).ready(function () {
     $('#btn-chat').click(function () {
         const message = $("#message").val();
         $("#message").val("");
+        console.log(message)
         //send message
-        $.post("http://localhost:5000/message", { message });
+        $.post("http://localhost:3000/message", { message });
     });
     function onMessageAdded(data) {
         let template = $("#new-message").html();

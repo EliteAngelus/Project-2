@@ -24,14 +24,14 @@ var pusher = new Pusher(
   });
 
 // Set up var app to use post and get to retrieve chat messages
-app.post('/message', function (req, res) {
-  var message = req.body.message;
-  pusher.trigger('public-chat', 'message-added', { message });
-  res.sendStatus(200);
-});
-app.get('/', function (req, res) {
-  res.sendFile('/public/index.html', { root: __dirname });
-});
+// app.post('/message', function (req, res) {
+//   var message = req.body.message;
+//   pusher.trigger('public-chat', 'message-added', { message });
+//   res.sendStatus(200);
+// });
+// app.get('/', function (req, res) {
+//   res.sendFile('/public/index.html', { root: __dirname });
+// });
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
