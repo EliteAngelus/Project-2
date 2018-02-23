@@ -17,10 +17,13 @@ $(document).ready(function () {
         console.log(message)
         //send message
         $.post("http://localhost:3000/message", { message });
+
     });
     function onMessageAdded(data) {
+        console.log("returned " + message)
         let template = $("#new-message").html();
-        template = template.replace("{{body}}", data.message);
+        // template = template.replace("{{body}}", data.message);
         $(".chat").append(template);
+        
     }
 });
