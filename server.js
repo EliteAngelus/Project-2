@@ -22,7 +22,7 @@ var pusher = new Pusher(
     secret: "26efb694b16fb3444fc1",
     cluster: "us2"
   });
-  pusher.trigger("language-app", "event",{
+  pusher.trigger("public-language-app", "event",{
     "message": "Hello World!"
   });
 
