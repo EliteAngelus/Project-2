@@ -22,6 +22,6 @@ $(document).ready(function () {
         console.log(data.message)
         let template = $("#new-message").html();
         template = template.replace("{{body}}", data.message);
-        $(".chat").append(template);
+        $(".chat").append(data.message);
     }
 });
