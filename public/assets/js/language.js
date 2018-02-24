@@ -19,11 +19,10 @@ $(document).ready(function () {
         $.post("http://localhost:3000/message", { message });
     });
     function onMessageAdded(data) {
-        let template = $("#new-message").html();
-        // template = template.replace("{{body}}", data.message);
-
-        console.log(template)
+        // let template = $("#new-message").html();
+        // template = template.replace(".chat-body", data.message);
+        // console.log(template)
         console.log(data.message)
-        $(".chat").append(data.message + "<br>");
+        $(".chat").append(template + "<br>");
     }
 });
