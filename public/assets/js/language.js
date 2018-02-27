@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#message").val("");
         console.log(message)
         //send message
-        $.post("http://localhost:3000/message", { message });
+        $.post("/message", { message });
         console.log(name)
         $(".chat").append(name + ": ")
     });
