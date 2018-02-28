@@ -1,9 +1,19 @@
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-.chat
-{
-    list-style: none;
-    margin: 0;
-    border: white;
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    width:100%;
+    border: 3px solid #555;
 }
 .chat li
 {
@@ -15,11 +25,13 @@
 .chat li.left .chat-body
 {
     margin-left: 0px;
+    margin: auto;
    
 }
 .chat li.right .chat-body
 {
     margin-right: 0px;
+    margin: auto;
  
    
 }
@@ -29,25 +41,27 @@
     margin: 0;
     color: #777777;
    
-}
-.panel .slidedown .glyphicon, .chat .glyphicon
-{
-    margin-right: 5px;
-    border: white;
+    margin: auto;
+   
 }
 
-#chat-page {
+
+ #chat-page {
     background: white !important;
     opacity: 0.6;
-    width: 50%;
+    margin-top: 50px;
+   
     padding: 0px;
+    margin: auto;
 
-}
-.panel-heading {
+} 
+/* .panel-heading {
     background: white !important;
     opacity: 0.3;
+    text-align: left;
     
-}
+} */
+
 .body-panel
 {
     overflow-y: scroll;
@@ -68,4 +82,10 @@ body {
     background: linear-gradient(-35deg, #86CDF1, #1E7E9B);
     height: 100%;
     background-repeat: no-repeat;
+  }
+
+  #btn-chat {
+      width: 100%;
+      background: #F16061;
+      border-color: #F16061;
   }
