@@ -7,6 +7,7 @@ $(document).ready(function() {
         $("#login-form").hide();
         $("#chat-page").show();
         name = $("#name").val().trim();
+        $.post("http://localhost:3000/api/users", { name });
     });
 
     function upsertUsers(usersData) {
@@ -29,9 +30,11 @@ $(document).ready(function() {
 
     //*NEW* line 32 allows to log users name in Users table in DB, but wont recognize language or difficulty....and wont show text in chatbox
     //in order to see what user types in chatbox, change line 32 to $.post("http://localhost:3000/messages", { message});
-       $.post("http://localhost:3000/api/users", { name });
+       
        //ALLOWS US TO VIEW OUR TYPED MESSAGE IN THE CHAT BOX
         $.post("http://localhost:3000/api/ChatMessages", { message });
+        $.post("/message", { message});
+        $(".chat").append(name + ": ")
 
     });
 
