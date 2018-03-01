@@ -39,9 +39,9 @@ app.post('/message', function (req, res) {
 });
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/controller.js");
+// var routes = require("./controllers/controller.js");
 
-app.use(routes);
+// app.use(routes);
 
 // app.listen(PORT, function() {
 //   console.log("App now listening at localhost:" + PORT);
