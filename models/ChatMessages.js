@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var ChatMessages = sequelize.define("ChatMessages", {
     messages: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       len: [1]
     },
   });
@@ -13,7 +13,7 @@ ChatMessages.associate = function (models){
   models.ChatMessages.belongsTo(models.Users, {
     onDelete: "CASCADE",
     foreignKey:{
-      allowNull: false
+      allowNull: true
     }
   })
 };
