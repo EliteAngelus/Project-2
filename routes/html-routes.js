@@ -11,11 +11,11 @@ var path = require("path");
 module.exports = function(app) {
 
 app.get("/", function(res, res) {
-  res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+  res.render(path.join(__dirname, "../views/index.handlebars"));
 });
 
   // cms route loads cms.html
   app.get("/endChat", function(req, res) {
-    res.sendFile(path.join(__dirname, "/endChat.html"));
+    res.sendFile(path.join(__dirname, "../public/endChat.html"));
   });
 };
