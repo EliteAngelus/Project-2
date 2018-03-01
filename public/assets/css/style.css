@@ -1,71 +1,165 @@
-@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-.chat
-{
-    list-style: none;
-    margin: 0;
-    border: white;
-}
-.chat li
-{
-    margin-bottom: 10px;
-   
-    border-bottom: 1px dotted #B3A9A9;
-   
-}
-.chat li.left .chat-body
-{
-    margin-left: 0px;
-   
-}
-.chat li.right .chat-body
-{
-    margin-right: 0px;
- 
-   
-}
-
-.chat li .chat-body p
-{
-    margin: 0;
-    color: #777777;
-   
-}
-.panel .slidedown .glyphicon, .chat .glyphicon
-{
-    margin-right: 5px;
-    border: white;
-}
-
-#chat-page {
-    background: white !important;
-    opacity: 0.6;
-    width: 50%;
-    padding: 0px;
-
-}
-.panel-heading {
+    @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+    .chat {
+        list-style: none;
+        margin: 0;
+        border: white;
+    }
+    
+    body {
+        background-image: url(../images/background.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 850px;
+    }
+    
+    img {
+        /* width: 400px; */
+        margin-top: 1%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        opacity: 1;
+        border-radius: 30px;
+    }
+    
+    .selectBox {
+        appearance: none;
+        -webkite-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
+        background: #f5f5f5 url('image-path') no-repeat right center;
+        border: 1px solid #eeeeee;
+        width: 300px;
+        height: 40;
+        padding: 10px;
+    }
+    
+    .about-name {
+        text-align: center;
+    }
+    
+    .forms {
+        text-align: center;
+    }
+    
+    nav {
+        font-size: 30px;
+        font-family: 'Acme', sans-serif;
+        color: aliceblue;
+        text-align: left
+    }
+    
+    .info-form {
+        margin: auto;
+        width: 500px;
+    }
+    
+    .selectBox {
+        border-radius: 20px;
+    }
+    /* .home-header {
+    font-family: 'Acme', sans-serif;
+    color: aliceblue
+} */
+    
+    .form-headers {
+        font-family: 'Acme', sans-serif;
+        color: aliceblue
+    }
+    
+    @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+    
+    input[type=text]:focus {
+        width: 100%;
+        border: 3px solid #555;
+    }
+    
+    .chat li {
+        margin-bottom: 10px;
+        border-bottom: 1px dotted #B3A9A9;
+    }
+    
+    .chat li.left .chat-body {
+        margin-left: 0px;
+        margin: auto;
+    }
+    
+    .chat li.right .chat-body {
+        margin-right: 0px;
+        margin: auto;
+    }
+    
+    .chat li .chat-body p {
+        margin: 0;
+        color: #777777;
+    }
+    
+    .panel .slidedown .glyphicon,
+    .chat .glyphicon {
+        margin-right: 5px;
+        border: white;
+    }
+    
+    #chat-page {
+        background: white !important;
+        opacity: 0.6;
+        width: 50%;
+        padding: 0px;
+    }
+    
+    .panel-heading {
+        background: white !important;
+        opacity: 0.3;
+    }
+    
+    #chat-page {
+        background: white !important;
+        opacity: 0.6;
+        margin-top: 50px;
+        padding: 0px;
+        margin: auto;
+    }
+    /* .panel-heading {
     background: white !important;
     opacity: 0.3;
+    text-align: left;
     
-}
-.body-panel
-{
-    overflow-y: scroll;
-    height: 250px;
-    border: white;
+} */
     
-}
-
-img {
-    width: 200px;
-    margin-top: 10px;
-}
-
-html {
-    height: 100%;
-}
-body {
-    background: linear-gradient(-35deg, #86CDF1, #1E7E9B);
-    height: 100%;
-    background-repeat: no-repeat;
-  }
+    .body-panel {
+        overflow-y: scroll;
+        height: 250px;
+        border: white;
+    }
+    
+    img {
+        width: 200px;
+        margin-top: 10px;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    body {
+        background: linear-gradient(-35deg, #86CDF1, #1E7E9B);
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    #btn-chat {
+        width: 100%;
+        background: #F16061;
+        border-color: #F16061;
+    }
