@@ -1,5 +1,47 @@
 <div class="container">
+{{!-- FRONT PAGE --}}
+  <nav>Tonguez
+  </nav>
+
   <img src="/assets/images/tonguez_logo_outline.png">
+  <form id="login-form">
+    <div class="info-form">
+      <div class="about-name">
+        <h3 class="form-headers">About You</h3>
+        <div class="form-group">
+          <label for="Name" style="color:antiquewhite">Name (Required)</label>
+          <input type="text" class='form-control' id='name' placeholder="Name...">
+        </div>
+      </div>
+      <div class="forms">
+        <h3 class="form-headers">What Language Would You Like to Learn?</h3>
+        <div class="form-group">
+
+          <select class="selectBox">
+            <option value="">Select a language</option>
+            <option value="1">Spanish</option>
+            <option value="2">French</option>
+            <option value="3">Portuguese</option>
+          </select>
+        </div>
+        <h3 class="form-headers">Select Skill Level</h3>
+        <div class="form-group">
+
+          <select class="selectBox">
+            <option value="">Level</option>
+            <option value="1"> Beginner</option>
+            <option value="2"> Intermediate</option>
+            <option value="3"> Advanced</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-info" id="get-started">Lets Get Learning!
+        </button>
+      </div>
+    </div>
+  </form>
+  {{!-- END OF FRONT PAGE --}} {{!-- Chat BOX --}}
+
+  {{!-- <img src="/assets/images/tonguez_logo_outline.png">
   <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-8 col-lg-offset-2"></div>
     <form id="login-form">
       <h3>About You</h3>
@@ -27,14 +69,14 @@
           </select>
         </div>
       <button id="get-started" type="submit">Lets Get Learning!</button>
-  </form>
+  </form> --}}
 
 
 
   
   <div id="chat-page">
     <div class="row form-group">
-      
+    
         {{!-- <div class="panel panel-primary"> --}}
           <div class="panel-heading">
             <span class="glyphicon glyphicon-comment"></span> Learn a Language
