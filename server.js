@@ -34,7 +34,7 @@ app.set("view engine", "handlebars");
 // Set up var app to use post and get to retrieve chat messages
 app.post('/message', function (req, res) {
   var message = req.body.message;
-  pusher.trigger('public-chat', 'message-added', { message });
+  pusher.trigger('public-language-chat', 'message-added', { message });
   res.sendStatus(200);
 });
 

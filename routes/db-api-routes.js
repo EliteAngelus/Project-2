@@ -15,7 +15,12 @@ module.exports = function(app) {
   });
 
   app.post("/api/ChatMessages", function(req, res){
-    db.ChatMessages.create(req.body).then(function(dbChatMessages){
+     console.log(req.body);
+    db.ChatMessages.create({
+      messages: req.body.message,
+      UserId: 1
+    }).then(function(dbChatMessages){
+      
       res.json(dbChatMessages);
     });
   });

@@ -25,8 +25,14 @@ $(document).ready(function() {
         $("#message").val("");
         console.log(message)
             //send message
-        $.post("http://localhost:3000/message", { message });
+       
+    //not too sure what line 30 does, but if i change/remove, we are unable to see our typed message in the chat box
+       $.post("http://localhost:3000/message", { message });
+       //ALLOWS US TO VIEW OUR TYPED MESSAGE IN THE CHAT BOX
+        $.post("http://localhost:3000/api/ChatMessages", { message });
+
     });
+
 
     function onMessageAdded(data) {
         let template = $("#new-message").html();

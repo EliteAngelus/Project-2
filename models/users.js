@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     difficulty: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
   });
   Users.associate = function(models){
     Users.hasMany(models.ChatMessages, {
