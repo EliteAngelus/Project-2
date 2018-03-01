@@ -2,10 +2,14 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.post("/api/Users", function(req, res) {
-    db.Users.create(req.body).then(function(dbUsers) {
+      console.log(req.body);
+    db.Users.create({
+      name: req.body.name
+    }).then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
+  //i changed the above*******
 
   app.get("/api/ChatMessages", function(req, res) {
     db.ChatMessages.findAll({}).then(function(dbChatMessages) {
