@@ -1,10 +1,18 @@
 $(document).ready(function() {
+    var name = ""
     $('#chat-page').hide();
     $("#get-started").click(function() {
         event.preventDefault();
+
         $("#login-form").hide();
         $("#chat-page").show();
+        name = $("#name").val().trim();
     });
+
+    function upsertUsers(usersData) {
+    $.post("/api/users", userData)
+      .then(getUsers);
+  }
 
     var pusher = new Pusher('507bfdfaab454a693999', {
         cluster: 'us2',
