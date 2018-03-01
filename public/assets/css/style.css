@@ -138,10 +138,11 @@ input[type=text]:focus {
 
  #chat-page {
     background: white !important;
-    opacity: 0.6;
+    opacity: 0.8;
     margin-top: 50px;,,kdx2d
     padding: 0px;
-    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
 
 } 
 /* .panel-heading {
@@ -156,6 +157,7 @@ input[type=text]:focus {
     overflow-y: scroll;
     height: 250px;
     border: white;
+   
     
 }
 
@@ -167,7 +169,35 @@ html {
 
 
   #btn-chat {
-      width: 100%;
+      width: 20%;
       background: #F16061;
       border-color: #F16061;
+      margin: auto;
+      margin-bottom:20px;
+      
+
   }
+
+
+
+span {
+    margin-left: 37px;
+    margin-top: 2px;
+}
+
+input {
+    margin: auto;
+}
+
+#message{
+    width: 500px;
+    margin: auto;
+    float: left;
+    float:inherit;
+    margin-bottom:8px;
+}
+  
+
+.panel-heading {
+    margin-right:37px;
+}
