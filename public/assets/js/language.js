@@ -5,6 +5,7 @@ $(document).ready(function() {
         $("#login-form").hide();
         $("#chat-page").show();
     });
+
     var pusher = new Pusher('507bfdfaab454a693999', {
         cluster: 'us2',
         encrypted: false
@@ -28,3 +29,4 @@ $(document).ready(function() {
         $(".chat").append(data.message + "<br>");
     }
 });
+        

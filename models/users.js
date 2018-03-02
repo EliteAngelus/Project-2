@@ -1,24 +1,29 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+module.exports = function(sequelize, DataTypes) {
+  var Users = sequelize.define("Users", {
+    // Giving the learner model a name of type STRING
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    language: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    difficulty: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+  });
+  Users.associate = function(models){
+    Users.hasMany(models.ChatMessages, {
+      onDelete: "cascade"
+    });
+  };
 
-var user = {
-  all: function(cb) {
-    orm.all("userTable", function(res) {
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
-    orm.create("userTable", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    orm.update("userTable", objColVals, condition, function(res) {
-      cb(res);
-    });
-  }
+
+  return Users;
 };
 
-// Export the database functions for the controller (controller.js).
-module.exports = user;
