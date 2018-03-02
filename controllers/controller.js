@@ -22,7 +22,6 @@ router.post("/api/userTable", function(req, res) {
     res.json({ id: result.insertId });
   });
 });
-
 router.put("/api/userTable/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
