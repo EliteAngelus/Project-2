@@ -64,10 +64,6 @@ nav {
 }
 
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-<<<<<<< HEAD
-=======
-
->>>>>>> database2
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -77,14 +73,11 @@ input[type=text] {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
-<<<<<<< HEAD
-=======
 }
 
 input[type=text]:focus {
-    width:100%;
+    width: 100%;
     border: 3px solid #555;
->>>>>>> database2
 }
 
 input[type=text]:focus {
@@ -100,55 +93,28 @@ input[type=text]:focus {
 .chat li.left .chat-body {
     margin-left: 0px;
     margin: auto;
-<<<<<<< HEAD
-=======
-   
->>>>>>> database2
 }
 
 .chat li.right .chat-body {
     margin-right: 0px;
     margin: auto;
-<<<<<<< HEAD
-=======
- 
-   
->>>>>>> database2
 }
 
 .chat li .chat-body p {
     margin: 0;
     color: #777777;
-<<<<<<< HEAD
     margin: auto;
-=======
-   
-    margin: auto;
-   
->>>>>>> database2
 }
 
-
- #chat-page {
+#chat-page {
     background: white !important;
-<<<<<<< HEAD
-    opacity: 0.8;
-    margin-top: 50px;
-    /* kdx2d padding: 0px; */
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-
-=======
     opacity: 0.6;
     margin-top: 50px;
-   
     padding: 0px;
     margin: auto;
+}
 
-} 
->>>>>>> database2
+
 /* .panel-heading {
     background: white !important;
     opacity: 0.3;
@@ -156,12 +122,7 @@ input[type=text]:focus {
     
 } */
 
-<<<<<<< HEAD
 .body-panel {
-=======
-.body-panel
-{
->>>>>>> database2
     overflow-y: scroll;
     height: 250px;
     border: white;
@@ -170,46 +131,16 @@ input[type=text]:focus {
 html {
     height: 100%;
 }
-<<<<<<< HEAD
 
-#btn-chat {
-    width: 20%;
-    background: #F16061;
-    border-color: #F16061;
-    margin: auto;
-    margin-bottom: 20px;
-}
 
-span {
-    margin-left: 37px;
-    margin-top: 2px;
-}
-
-input {
-    margin: auto;
-}
-
-#message {
-    width: 500px;
-    margin: auto;
-    float: left;
-    float: inherit;
-    margin-bottom: 8px;
-}
-
-.panel-heading {
-    margin-right: 37px;
-}
-=======
-body {
+/* body {
     background: linear-gradient(-35deg, #86CDF1, #1E7E9B);
     height: 100%;
     background-repeat: no-repeat;
-  }
+} */
 
-  #btn-chat {
-      width: 100%;
-      background: #F16061;
-      border-color: #F16061;
-  }
->>>>>>> database2
+#btn-chat {
+    width: 100%;
+    background: #F16061;
+    border-color: #F16061;
+}

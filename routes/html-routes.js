@@ -10,26 +10,24 @@ var path = require("path");
 // =============================================================
 module.exports = function(app) {
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
+    // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
+    // index route loads view.html
+    // app.get("/", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../views/main.handlebars"));
+    // });
 
-  // cms route loads cms.html
-  app.get("/endChat", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/endChat.html"));
-  });
+    app.get('/', function(req, res) {
+        res.render('index', { root: __dirname });
+    });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
 
-  // authors route loads author-manager.html
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
-  });
+    // cms route loads cms.html
+    app.get("/endChat", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/endChat.html"));
+    });
+
+
+
 
 };
