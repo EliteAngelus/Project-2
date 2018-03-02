@@ -30,19 +30,22 @@ $(document).ready(function() {
         const message = $("#message").val();
         $("#message").val("");
         console.log(message)
-            //send message
-       
-
-    //*NEW* line 32 allows to log users name in Users table in DB, but wont recognize language or difficulty....and wont show text in chatbox
-    //in order to see what user types in chatbox, change line 32 to $.post("http://localhost:3000/message", { message});
        
        //ALLOWS US TO VIEW OUR TYPED MESSAGE IN THE CHAT BOX
-        // $.post("http://localhost:3000/api/ChatMessages", { message });
         $.post("/message", { message});
         $(".chat").append(name + ": ")
 
     });
+    $('#end-chat').click(function() {
+        //download database as txt file
+        $.post("/endChat", { 
 
+
+
+        });
+
+        //clear database
+    });
 
     function onMessageAdded(data) {
         let template = $("#new-message").html();
