@@ -16,7 +16,7 @@ img {
 }
 
 .selectBox {
-    appearance: none;
+    /* appearance: none; */
     -webkite-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
