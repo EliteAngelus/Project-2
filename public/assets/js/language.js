@@ -37,7 +37,7 @@ $(document).ready(function() {
     //in order to see what user types in chatbox, change line 32 to $.post("http://localhost:3000/message", { message});
        
        //ALLOWS US TO VIEW OUR TYPED MESSAGE IN THE CHAT BOX
-        $.post("http://localhost:3000/api/ChatMessages", { message });
+        // $.post("http://localhost:3000/api/ChatMessages", { message });
         $.post("/message", { message});
         $(".chat").append(name + ": ")
 
@@ -47,7 +47,8 @@ $(document).ready(function() {
     function onMessageAdded(data) {
         let template = $("#new-message").html();
         // template = template.replace("{{body}}", data.message);
-
+        var message = data.message
+        $.post("http://localhost:3000/api/ChatMessages", { message })
         console.log(template)
         console.log(data.message)
         $(".chat").append(data.message + "<br>");
