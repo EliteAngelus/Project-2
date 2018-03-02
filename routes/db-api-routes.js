@@ -9,6 +9,7 @@ module.exports = function(app) {
       res.json(dbUsers);
     });
   });
+  
   //i changed the above*******
 
   app.get("/api/ChatMessages", function(req, res) {
