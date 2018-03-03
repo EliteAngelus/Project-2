@@ -25,4 +25,26 @@ $(document).ready(function () {
         console.log(data.message)
         $(".chat").append(template + "<br>");
     }
+
+    
+// connect translate button to input box to translate word
+    $("#transButton").click(function (){
+        var preTranslate = $("#preTranslate").val().trim();
+        console.log (preTranslate)
+    
+//api request and console translated word
+        $.ajax({
+            method: "POST",
+            url: 'https://translate.yandex.net/api/v1.5/tr/detect?hint=en,de&?text=' + preTranslate + '&userInput&key=trnsl.1.1.20180228T235240Z.c50a73fab700d266.d87e32c47eece8504a90611e96df3157747050fe'
+        }).done(function(trans) { 
+            console.log(`
+               Translated Word:
+               ==================
+              
+           `)
+           console.log(trans)
+        })
+    
+    }
+)
 });
