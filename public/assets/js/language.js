@@ -38,14 +38,7 @@ $(document).ready(function() {
         $(".chat").append(name + ": ")
 
     });
-    // $('#end-chat').click(function() {
-    //     //download database as txt file
-    //     $.post("/endChat", {
 
-    //     });
-
-    //     //clear database
-    // });
     function onMessageAdded(data) {
         let template = $("#new-message").html();
         // template = template.replace("{{body}}", data.message);
