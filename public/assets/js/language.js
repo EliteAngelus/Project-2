@@ -42,15 +42,10 @@ $(document).ready(function() {
     //     //download database as txt file
     //     $.post("/endChat", {
 
-
-
     //     });
 
     //     //clear database
     // });
-
-
-
     function onMessageAdded(data) {
         let template = $("#new-message").html();
         // template = template.replace("{{body}}", data.message);
@@ -60,4 +55,22 @@ $(document).ready(function() {
         console.log(data.message)
         $(".chat").append(data.message + "<br>");
     }
+
+    // Code to work dictionary
+    $("#translateBtn").click(function() {
+        event.preventDefault();
+        var userInput = $("#preTranslate").val().trim();
+        console.log(userInput)
+        $.ajax({
+            method: "POST",
+            url: 'https://translate.yandex.net/api/v1.5/tr.json/translate?lang=es&text=' + userInput + '&key=trnsl.1.1.20180228T235240Z.c50a73fab700d266.d87e32c47eece8504a90611e96df3157747050fe'
+        }).done(function(trans) {
+            console.log(trans.text)
+            $("#translateWord").append(trans.text)
+        })
+
+    });
+
+
+
 });
