@@ -13,6 +13,7 @@ $(document).ready(function() {
         console.log(language);
         $.post("http://localhost:3000/api/users", { name });
         $.post("http://localhost:3000/api/users", { language });
+
     });
 
 

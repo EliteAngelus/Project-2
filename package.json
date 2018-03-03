@@ -25,6 +25,8 @@
         "mysql2": "^1.5.2",
         "nodemon": "^1.15.1",
         "pusher": "^1.5.1",
-        "sequelize": "^4.34.1"
+        "requirejs": "^2.3.5",
+        "sequelize": "^4.34.1",
+        "translate": "^1.0.2"
     }
 }
