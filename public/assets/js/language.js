@@ -66,7 +66,7 @@ $(document).ready(function() {
             url: 'https://translate.yandex.net/api/v1.5/tr.json/translate?lang=es&text=' + userInput + '&key=trnsl.1.1.20180228T235240Z.c50a73fab700d266.d87e32c47eece8504a90611e96df3157747050fe'
         }).done(function(trans) {
             console.log(trans.text)
-            $("#translateWord").append(trans.text)
+            $("#translateWord").append(userInput +": " + trans.text + "<br>")
         })
 
     });
