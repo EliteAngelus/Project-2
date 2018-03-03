@@ -11,8 +11,8 @@ $(document).ready(function() {
         name = $("#name").val().trim();
         language = $("#language-select").find('option:selected').text();
         console.log(language);
-        $.post("http://localhost:3000/api/users", { name });
-        $.post("http://localhost:3000/api/users", { language });
+        $.post("/api/users", { name });
+        $.post("/api/users", { language });
     });
 
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
         let template = $("#new-message").html();
         // template = template.replace("{{body}}", data.message);
         var message = data.message
-        $.post("http://localhost:3000/api/ChatMessages", { message })
+        $.post("/api/ChatMessages", { message })
         console.log(template)
         console.log(data.message)
         $(".chat").append(data.message + "<br>");
