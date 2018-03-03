@@ -15,6 +15,8 @@ $(document).ready(function() {
         $.post("http://localhost:3000/api/users", { language });
     });
 
+
+
     function upsertUsers(usersData) {
         $.post("/api/users", userData)
             .then(getUsers);
@@ -36,16 +38,18 @@ $(document).ready(function() {
         $(".chat").append(name + ": ")
 
     });
-    $('#end-chat').click(function() {
-        //download database as txt file
-        $.post("/endChat", {
+    // $('#end-chat').click(function() {
+    //     //download database as txt file
+    //     $.post("/endChat", {
 
 
 
-        });
+    //     });
 
-        //clear database
-    });
+    //     //clear database
+    // });
+
+
 
     function onMessageAdded(data) {
         let template = $("#new-message").html();

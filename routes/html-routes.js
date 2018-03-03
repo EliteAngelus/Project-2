@@ -17,10 +17,13 @@ module.exports = function(app) {
     //     res.sendFile(path.join(__dirname, "../views/main.handlebars"));
     // });
 
-    app.get('/', function(req, res) {
-        res.render('index', { root: __dirname });
-    });
+    // app.get('/', function(req, res) {
+    //     res.render('index', { root: __dirname });
+    // });
 
+    app.get('/', function(res, res) {
+        res.render(path.join(__dirname, '../views/index.handlebars'));
+    });
 
     // cms route loads cms.html
     app.get("/endChat", function(req, res) {
