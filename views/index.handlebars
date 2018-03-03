@@ -42,7 +42,7 @@
  
 
 
-  
+  {{!-- whole chat box --}}
   <div id="chat-page">
     <div class="row form-group">
     
@@ -87,20 +87,34 @@
             <ul class="chat">
             </ul>
           </div>
-          {{!-- <div class="panel-footer clearfix"> --}}
-            {{!-- <textarea id="message" class="form-control" rows="3"></textarea> --}}
-          
+          {{!-- incoming messages inside chat box seen by everyone --}}
              <input type="text" id="message" class="form-control" rows="3">
          <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
 
-            {{!-- <span class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" style="margin-top: 10px">
-              <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
-            </span> --}}
-          {{!-- </div> --}}
-        {{!-- </div> --}}
+
+
+{{!-- search bar --}}
+<div class="wrapper">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" id="preTranslate" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" id="translateBtn" type="button">Translate!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<div class="dict-info" id="translateWord"></div>
+</div>
       </div>
+
+    
     </div>
+  
     </div>
+
+
+ 
 
 
 
