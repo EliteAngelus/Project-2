@@ -189,3 +189,13 @@ input {
     background-color: white;
     opacity: 0.9;
 }
+
+.btn .btn-info {
+   /* position: fixed; */
+
+   top: -170px;
+   width: 300px;
+   margin-top: -218px;
+   margin-left: -10px;
+  
+}

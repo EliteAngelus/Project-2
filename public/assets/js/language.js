@@ -71,6 +71,10 @@ $(document).ready(function() {
 
     });
 
+    $("#endChatBtn").click(function() {
+        event.preventDefault();
+        $('#chat-page').hide();
+    })
 
 
 });
